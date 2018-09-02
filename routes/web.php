@@ -20,7 +20,7 @@ $router->post('register', 'RegisterController@register');
 $router->get('login', 		'AuthController@login');
 
 
-// JWT protecteed routes
+// JWT protected routes
 $router->group(['middleware' => ['jwt', 'user']], function () use ($router) {
 
 	$router->get('refresh', 		'AuthController@refresh');

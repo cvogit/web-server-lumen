@@ -16,7 +16,7 @@ class User extends Model
 	 * @var array
 	 */
 	protected $fillable = [
-		'email', 'password', 'lastLogin'
+		'email', 'lastLogin'
 	];
 
 	/**
@@ -25,6 +25,7 @@ class User extends Model
 	 * @var array
 	 */
 	protected $hidden = [
+		'password'
 	];
 
 	/**

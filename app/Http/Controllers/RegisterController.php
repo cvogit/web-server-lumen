@@ -48,6 +48,7 @@ class RegisterController extends Controller
 			return response()->json(["message" => $validation->errors()], 500);
 
 		$user = $this->create($data);
+
 		return response()->json(['message' => "Registration successful."], 200);
 	}
 
@@ -58,7 +59,6 @@ class RegisterController extends Controller
 	 */
 	public function validator(array $data)
 	{
-
 		return Validator::make($data, [
 			'email'     => 'required|string|email|max:255|unique:users',
 			'password'  => 'required|string|min:6|confirmed',

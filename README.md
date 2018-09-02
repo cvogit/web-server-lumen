@@ -1,3 +1,3 @@
-# A Lumen web server
+# Lumen webserver jump start
 
-Hosted on Amazon AWS, this project provides the back-end of a business management software.
+A jump start repository for Lumen webservers
