@@ -42,7 +42,7 @@ class RegisterController extends Controller
 	public function register(Request $request)
 	{
 		$data = $request->all();
-
+		
 		$validation = $this->validator($data);
 		if($validation->fails())
 			return response()->json(["message" => $validation->errors()], 500);

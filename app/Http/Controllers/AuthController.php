@@ -32,12 +32,12 @@ class AuthController extends Controller
 	 */
 	public function login(Request $request)
 	{
-		$validator = $this->loginValidator($request->all());
+		$data = $request->all();
+		$validation = $this->loginValidator($data);
 		
-		if($validator->fails())
-			return response()->json([
-			'message' => (string) $validator->messages()
-			], 422);
+		if($validation->fails())
+			return response()->json(["message" => $validation->errors()], 422);
+
 		// Find user from db
 		$user = User::where('email', $request->input('email'))->first();
 
