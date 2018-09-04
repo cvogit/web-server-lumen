@@ -25,4 +25,5 @@ $router->group(['middleware' => ['jwt', 'user']], function () use ($router) {
 
 	$router->get('refresh', 		'AuthController@refresh');
 
+	$router->post('posts',			'PostController@create');
 });
