@@ -19,6 +19,7 @@ $router->post('register', 'RegisterController@register');
 
 $router->get('login', 		'AuthController@login');
 
+$router->get('posts[/{offset}]', 		'PostController@get');
 
 // JWT protected routes
 $router->group(['middleware' => ['jwt', 'user']], function () use ($router) {
@@ -26,4 +27,7 @@ $router->group(['middleware' => ['jwt', 'user']], function () use ($router) {
 	$router->get('refresh', 		'AuthController@refresh');
 
 	$router->post('posts',			'PostController@create');
+
+	$router->put('posts/{postId}/vote/{newVote}',			'PostController@vote');
+
 });

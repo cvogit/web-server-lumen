@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Hash;
 use Laravel\Lumen\Auth\Authorizable;
 use Illuminate\Database\Eloquent\Model;
 
-class UserVote extends Model 
+class UsersVote extends Model 
 {
 
 	/**
@@ -16,7 +16,7 @@ class UserVote extends Model
 	 * @var array
 	 */
 	protected $fillable = [
-		'user_id', 'post_id'
+		'user_id', 'post_id', 'vote'
 	];
 
 	/**
