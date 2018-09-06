@@ -15,6 +15,7 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('title', 128)->nullable(false);
             $table->integer('image_1_id')->references('id')->on('images');
             $table->integer('image_2_id')->references('id')->on('images');
             $table->integer('image_1_votes')->default(0);

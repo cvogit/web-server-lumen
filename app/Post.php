@@ -16,7 +16,7 @@ class Post extends Model
 	 * @var array
 	 */
 	protected $fillable = [
-		'image_1_id', 'image_2_id', 'image_1_votes', 'image_2_votes'
+		'title', 'image_1_id', 'image_2_id', 'image_1_votes', 'image_2_votes'
 	];
 
 	/**
